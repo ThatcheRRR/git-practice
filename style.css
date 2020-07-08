@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+main,
+footer,
+header {
+  display: -ms-grid;
+  display: grid;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1366px;
+  -ms-grid-rows: 715px 853px 715px;
+      grid-template-rows: 715px 853px 715px;
+  background-color: antiquewhite;
+}
+
+header {
+  -ms-grid-columns: 908px 458px;
+      grid-template-columns: 908px 458px;
+}
+
+header div:first-of-type {
+  background-image: url("assets/main_img.jpg");
+  background-repeat: no-repeat;
+}
+
+main {
+  -ms-grid-rows: 1fr 1fr;
+  -ms-grid-columns: 616px 750px;
+      grid-template: 1fr 1fr / 616px 750px;
+      grid-template-areas: "steps history"  "steps verify";
+}
+
+main .steps {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: steps;
+  background-image: url("assets/steps.jpg");
+}
+
+main .history {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: history;
+  background-image: url("assets/history.jpg");
+}
+
+main .verify {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: verify;
+  background-image: url("assets/verify.jpg");
+}
+
+footer {
+  -ms-grid-columns: 458px 908px;
+      grid-template-columns: 458px 908px;
+}
+
+footer .rights {
+  background-image: url("assets/right.jpg");
+}
+
+footer .form {
+  background-image: url("assets/form.jpg");
+}
+/*# sourceMappingURL=style.css.map */

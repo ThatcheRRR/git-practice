@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body,
+main,
+footer,
+header {
+    display: grid;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1366px;
+    grid-template-rows: 715px 853px 715px;
+    background-color: antiquewhite;
+}
+
+header {
+    grid-template-columns: 908px 458px;
+    div:first-of-type {
+        background-image: url("assets/main_img.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .info {
+        
+    }
+}
+
+main {
+    grid-template: 1fr 1fr / 616px 750px;
+    grid-template-areas: 
+    "steps history" 
+    "steps verify";
+
+    .steps {
+        grid-area: steps;
+        background-image: url("assets/steps.jpg");
+    }
+
+    .history {
+        grid-area: history;
+        background-image: url("assets/history.jpg");
+    }
+
+    .verify {
+        grid-area: verify;
+        background-image: url("assets/verify.jpg");
+    }
+}
+
+footer {
+    grid-template-columns: 458px 908px;
+    
+    .rights {
+        background-image: url("assets/right.jpg");
+    }
+
+    .form {
+        background-image: url("assets/form.jpg");
+    }
+}
